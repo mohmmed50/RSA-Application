@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -239,43 +240,31 @@ class _MainPageState extends State<MainPage> {
       ),
     ];
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.black,
-          unselectedFontSize: 10,
-          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
-          showUnselectedLabels: true,
-          unselectedItemColor: Color.fromARGB(255, 163, 163, 163),
-          currentIndex: PageIndex,
+      bottomNavigationBar: CurvedNavigationBar(
+          index: PageIndex,
+          height: 60,
           onTap: (val) {
             setState(() {
               PageIndex = val;
             });
           },
           items: [
-            BottomNavigationBarItem(
-                label: "Home",
-                icon: Icon(
+            Icon(
                   Icons.home,
                   color: Colors.black,
-                )),
-            BottomNavigationBarItem(
-                label: "Subjects",
-                icon: Icon(
+                ),
+            Icon(
                   Icons.book,
                   color: Colors.black,
-                )),
-            BottomNavigationBarItem(
-                label: "Homework",
-                icon: Icon(
+                ),
+            Icon(
                   Icons.menu_book,
                   color: Colors.black,
-                )),
-            BottomNavigationBarItem(
-                label: "Profile",
-                icon: Icon(
+                ),
+             Icon(
                   Icons.person,
                   color: Colors.black,
-                )),
+                ),
           ]),
       body: Pages.elementAt(PageIndex),
     );
