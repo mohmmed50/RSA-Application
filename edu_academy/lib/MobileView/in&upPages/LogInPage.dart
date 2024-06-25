@@ -7,6 +7,8 @@ class LogInPage extends StatefulWidget {
   State<LogInPage> createState() => _LoginPageState();
 }
 
+var obscureText = true;
+
 class _LoginPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
@@ -68,7 +70,16 @@ class _LoginPageState extends State<LogInPage> {
                                   Expanded(
                                       flex: 2,
                                       child: TextField(
+                                        obscureText: obscureText,
                                         decoration: InputDecoration(
+                                            suffix: IconButton(
+                                                onPressed: () {
+                                                  setState(() {
+                                                  obscureText = !obscureText;
+                                                  });
+                                                },
+                                                icon: Icon(Icons
+                                                    .remove_red_eye_outlined)),
                                             label: Text(
                                               "Password :",
                                               style: TextStyle(

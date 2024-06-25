@@ -5,7 +5,7 @@ class TeacherSignUpPage extends StatefulWidget {
   @override
   State<TeacherSignUpPage> createState() => _TeacherSignUpPageState();
 }
-
+var obscureText = true;
 class _TeacherSignUpPageState extends State<TeacherSignUpPage> {
   @override
   Widget build(BuildContext context) {
@@ -121,7 +121,16 @@ class _TeacherSignUpPageState extends State<TeacherSignUpPage> {
                                   Expanded(
                                       flex: 2,
                                       child: TextField(
+                                        obscureText: obscureText,
                                         decoration: InputDecoration(
+                                          suffix: IconButton(
+                                                onPressed: () {
+                                                  setState(() {
+                                                  obscureText = !obscureText;
+                                                  });
+                                                },
+                                                icon: Icon(Icons
+                                                    .remove_red_eye_outlined)),
                                             label: Text(
                                               "Password :",
                                               style: TextStyle(
@@ -136,7 +145,16 @@ class _TeacherSignUpPageState extends State<TeacherSignUpPage> {
                                   Expanded(
                                       flex: 2,
                                       child: TextField(
+                                        obscureText: obscureText,
                                         decoration: InputDecoration(
+                                          suffix: IconButton(
+                                                onPressed: () {
+                                                  setState(() {
+                                                  obscureText = !obscureText;
+                                                  });
+                                                },
+                                                icon: Icon(Icons
+                                                    .remove_red_eye_outlined)),
                                             label: Text(
                                               "Repeat Password :",
                                               style: TextStyle(
