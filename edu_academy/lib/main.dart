@@ -1,19 +1,23 @@
-import 'package:edu_academy/Mobile&StudentPages/HomePage.dart';
-import 'package:edu_academy/Mobile&StudentPages/in&upPages/StudentMobileSignUpPage.dart';
+import 'package:edu_academy/MobileView/StudentHomePage.dart';
+import 'package:edu_academy/MobileView/in&upPages/ParentSignUpPage.dart';
+import 'package:edu_academy/MobileView/in&upPages/StudentMobileSignUpPage.dart';
+import 'package:edu_academy/MobileView/in&upPages/TeacherSignUpPage.dart';
 import 'package:edu_academy/WhatAreYouPage.dart';
-import 'package:edu_academy/Mobile&StudentPages/in&upPages/LogInPage.dart';
-import 'package:edu_academy/Mobile&StudentPages/mainPage.dart';
+import 'package:edu_academy/MobileView/in&upPages/LogInPage.dart';
+import 'package:edu_academy/MobileView/StudentMainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:edu_academy/SplashViewPage.dart';
 
 void main() {
   runApp(GetMaterialApp(routes: {
-    "home": (context) => HomePage(),
+    "StudentHomePage": (context) => StudentHomePage(),
     "SplashView": (context) => SplashViewPage(),
     "StudentMobileSignUpPage": (context) => StudentMobileSignUpPage(),
     "LogInPage": (context) => LogInPage(),
-    "MainPage": (context) => MainPage(),
+    "StudentMainPage": (context) => StudentMainPage(),
     "WhatAreYouPage": (context) => WhatAreYouPage(),
+    "ParentSignUpPage": (context) => ParentSignUpPage(),
+    "TeacherSignUpPage": (context) => TeacherSignUpPage(),
   }, home: SplashViewPage()));
 }

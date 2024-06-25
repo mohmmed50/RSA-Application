@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class LogInPage extends StatefulWidget {
-  const LogInPage({super.key});
+class StudentMobileSignUpPage extends StatefulWidget {
+  const StudentMobileSignUpPage({super.key});
 
   @override
-  State<LogInPage> createState() => _LoginPageState();
+  State<StudentMobileSignUpPage> createState() => _StudentMobileSignUpPageState();
 }
 
-class _LoginPageState extends State<LogInPage> {
+class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,18 @@ class _LoginPageState extends State<LogInPage> {
           child: Column(
             children: [
               Expanded(
-                  flex: 6,
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(Icons.arrow_back_rounded),
+                  ),
+                ),
+              ),
+              Expanded(
+                  flex: 3,
                   child: Container(
                     margin: EdgeInsets.all(40),
                     width: 220,
@@ -31,6 +42,14 @@ class _LoginPageState extends State<LogInPage> {
                     alignment: Alignment.center,
                     child: Image.asset("images/Logo.png", fit: BoxFit.cover),
                   )),
+                  Expanded(child: Container(
+                    child: Row(
+                      children: [
+                        Expanded(child: Container(alignment: Alignment.topRight,child: Text("Student  ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600)))),
+                        Expanded(flex: 2,child: Container(alignment: Alignment.centerLeft,child: Icon(Icons.arrow_forward))),
+                      ],
+                    ),
+                  ),),
               Expanded(
                 flex: 14,
                 child: Container(
@@ -44,7 +63,7 @@ class _LoginPageState extends State<LogInPage> {
                           Expanded(
                             flex: 14,
                             child: Container(
-                              height: 400,
+                              height: 450,
                               width: 600,
                               color: const Color.fromARGB(255, 255, 255, 255),
                               padding: EdgeInsets.all(15),
@@ -70,7 +89,52 @@ class _LoginPageState extends State<LogInPage> {
                                       child: TextField(
                                         decoration: InputDecoration(
                                             label: Text(
+                                              "Parent Number :",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            icon: Icon(Icons.person_sharp),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    strokeAlign: 10))),
+                                      )),
+                                  Expanded(
+                                      flex: 2,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                            label: Text(
+                                              "Full Name :",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            icon: Icon(Icons.person_sharp),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    strokeAlign: 10))),
+                                      )),
+                                  Expanded(
+                                      flex: 2,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                            label: Text(
                                               "Password :",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            icon: Icon(Icons.password_rounded),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    strokeAlign: 10))),
+                                      )),
+                                  Expanded(
+                                      flex: 2,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                            label: Text(
+                                              "Repeat Password :",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.w600),
@@ -86,14 +150,14 @@ class _LoginPageState extends State<LogInPage> {
                                     child: InkWell(
                                         onTap: () {
                                           Navigator.pushReplacementNamed(
-                                              context, "MainPage");
+                                              context, "StudentMainPage");
                                         },
                                         child: Container(
                                             alignment: Alignment.center,
                                             child: Text(
-                                              "Login",
+                                              "Sign up",
                                               style: TextStyle(
-                                                  fontSize: 35,
+                                                  fontSize: 30,
                                                   fontWeight: FontWeight.w500,
                                                   color: Color.fromARGB(
                                                       255, 255, 255, 255)),
@@ -118,10 +182,10 @@ class _LoginPageState extends State<LogInPage> {
                                             child: TextButton(
                                               onPressed: () {
                                                 Navigator.pushReplacementNamed(
-                                                    context, "WhatAreYouPage");
+                                                    context, "LogInPage");
                                               },
                                               child: Text(
-                                                "Sign In",
+                                                "Login",
                                                 style: TextStyle(
                                                     color: Color.fromARGB(
                                                         255, 174, 174, 174)),

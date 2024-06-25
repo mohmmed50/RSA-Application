@@ -19,12 +19,12 @@ class _WhatAreYouPageState extends State<WhatAreYouPage> {
         Padding(padding:EdgeInsets.only(top: 20)),
         
         InkWell(onTap: () {
-          Navigator.pushNamed(context, "StudentMobileSignUpPage");
+          Navigator.pushNamed(context, "TeacherSignUpPage");
         },child: Expanded(child: Container(alignment: Alignment.center,width: double.infinity,child: Text("Teacher",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600,color: const Color.fromARGB(255, 250, 249, 246)),),height: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 139, 238, 255),borderRadius: BorderRadius.circular(10)),)),),
         Padding(padding:EdgeInsets.only(top: 20)),
         
         InkWell(onTap: () {
-          Navigator.pushNamed(context, "StudentMobileSignUpPage");
+          Navigator.pushNamed(context, "ParentSignUpPage");
         },child: Expanded(child: Container(alignment: Alignment.center,width: double.infinity,child: Text("Student's Gardian",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600,color: const Color.fromARGB(255, 250, 249, 246)),),height: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 139, 238, 255),borderRadius: BorderRadius.circular(10)),)),),
         Padding(padding:EdgeInsets.only(top: 20)),
         

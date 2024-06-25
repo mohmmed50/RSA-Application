@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-class StudentMobileSignUpPage extends StatefulWidget {
-  const StudentMobileSignUpPage({super.key});
+class ParentSignUpPage extends StatefulWidget {
+  const ParentSignUpPage({super.key});
 
   @override
-  State<StudentMobileSignUpPage> createState() => _StudentMobileSignUpPageState();
+  State<ParentSignUpPage> createState() => _ParentSignUpPageState();
 }
 
-class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
+class _ParentSignUpPageState extends State<ParentSignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +41,14 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                     alignment: Alignment.center,
                     child: Image.asset("images/Logo.png", fit: BoxFit.cover),
                   )),
+                  Expanded(child: Container(
+                    child: Row(
+                      children: [
+                        Expanded(child: Container(alignment: Alignment.topRight,child: Text("Parent  ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600)))),
+                        Expanded(flex: 2,child: Container(alignment: Alignment.centerLeft,child: Icon(Icons.arrow_forward))),
+                      ],
+                    ),
+                  ),),
               Expanded(
                 flex: 14,
                 child: Container(
@@ -66,37 +73,22 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                                       child: TextField(
                                         decoration: InputDecoration(
                                             label: Text(
-                                              "Email or Phone Number :",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                            icon: Icon(Icons.person_sharp),
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    strokeAlign: 10))),
-                                      )),
-                                  Expanded(
-                                      flex: 2,
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                            label: Text(
-                                              "Parent Number :",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                            icon: Icon(Icons.person_sharp),
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    strokeAlign: 10))),
-                                      )),
-                                  Expanded(
-                                      flex: 2,
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                            label: Text(
                                               "Full Name :",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            icon: Icon(Icons.person_sharp),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    strokeAlign: 10))),
+                                      )),
+                                  Expanded(
+                                      flex: 2,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                            label: Text(
+                                              "Phone Number :",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.w600),
@@ -142,7 +134,7 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                                     child: InkWell(
                                         onTap: () {
                                           Navigator.pushReplacementNamed(
-                                              context, "MainPage");
+                                              context, "StudentMainPage");
                                         },
                                         child: Container(
                                             alignment: Alignment.center,
