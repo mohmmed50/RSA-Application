@@ -38,7 +38,10 @@ class _SplashViewPageState extends State<SplashViewPage>
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(color: Color.fromARGB(255, 250, 249, 246)
+        decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.bottomLeft,end: Alignment.topRight,colors: [
+        Color.fromARGB(255, 8, 125, 159),
+        Color.fromARGB(255, 74, 193, 241)
+      ])
         ),
         alignment: Alignment.center,
         child: Padding(
@@ -59,11 +62,9 @@ class _SplashViewPageState extends State<SplashViewPage>
                               child: Image.asset("images/Logo.png"),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 250, 249, 246),
                               ),
                             ),
                           )),
-                      Expanded(flex: 1, child: Container()),
                     ],
                   )),
               Expanded(flex: 10, child: Container()),

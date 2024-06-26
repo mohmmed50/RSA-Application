@@ -13,164 +13,174 @@ class _LoginPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: BoxDecoration(color: Color.fromARGB(255, 250, 249, 246)),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Expanded(
-                  flex: 6,
-                  child: Container(
-                    margin: EdgeInsets.all(40),
-                    width: 220,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 250, 249, 246),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    alignment: Alignment.center,
-                    child: Image.asset("images/Logo.png", fit: BoxFit.cover),
-                  )),
-              Expanded(
-                flex: 14,
-                child: Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: Column(
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      body: Column(children: [
+        Expanded(
+            flex: 5,
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                    Color.fromARGB(255, 8, 125, 159),
+                    Color.fromARGB(255, 74, 193, 241)
+                  ])),
+              child: Column(
+                children: [
+                  Expanded(
+                      child: Row(
                     children: [
-                      Row(
-                        children: [
-                          Expanded(flex: 1, child: Container()),
-                          Expanded(
-                            flex: 14,
-                            child: Container(
-                              height: 400,
-                              width: 600,
-                              color: const Color.fromARGB(255, 255, 255, 255),
-                              padding: EdgeInsets.all(15),
-                              child: Column(
-                                children: [
-                                  Expanded(
-                                      flex: 2,
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                            label: Text(
-                                              "Email or Phone Number :",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                            icon: Icon(Icons.person_sharp),
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    strokeAlign: 10))),
-                                      )),
-                                  Expanded(
-                                      flex: 2,
-                                      child: TextField(
-                                        obscureText: obscureText,
-                                        decoration: InputDecoration(
-                                            suffix: IconButton(
-                                                onPressed: () {
-                                                  setState(() {
-                                                  obscureText = !obscureText;
-                                                  });
-                                                },
-                                                icon: Icon(Icons
-                                                    .remove_red_eye_outlined)),
-                                            label: Text(
-                                              "Password :",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.w600),
-                                            ),
-                                            icon: Icon(Icons.password_rounded),
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    strokeAlign: 10))),
-                                      )),
-                                  Padding(padding: EdgeInsets.only(top: 40)),
-                                  Expanded(
-                                    flex: 2,
-                                    child: InkWell(
-                                        onTap: () {
-                                          Navigator.pushReplacementNamed(
-                                              context, "StudentMainPage");
-                                        },
-                                        child: Container(
-                                            alignment: Alignment.center,
-                                            child: Text(
-                                              "Login",
-                                              style: TextStyle(
-                                                  fontSize: 35,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color.fromARGB(
-                                                      255, 255, 255, 255)),
-                                            ),
-                                            height: 60,
-                                            width: 120,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                color: Color.fromARGB(
-                                                    255, 81, 81, 81)))),
-                                  ),
-                                  Expanded(
-                                    flex: 2,
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      child: Row(
-                                        children: [
-                                          Expanded(
-                                              child: Container(
-                                            alignment: Alignment.center,
-                                            child: TextButton(
-                                              onPressed: () {
-                                                Navigator.pushReplacementNamed(
-                                                    context, "WhatAreYouPage");
-                                              },
-                                              child: Text(
-                                                "Sign In",
-                                                style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 174, 174, 174)),
-                                              ),
-                                            ),
-                                          )),
-                                          Expanded(
-                                              child: Container(
-                                            alignment: Alignment.center,
-                                            child: TextButton(
-                                              onPressed: () {},
-                                              child: Text(
-                                                "Forgot Password?",
-                                                style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 174, 174, 174)),
-                                              ),
-                                            ),
-                                          )),
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
+                      Container(
+                          alignment: Alignment.bottomLeft,
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(0, 40, 20, 0),
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Log in",
+                              style: TextStyle(
+                                  fontSize: 40,
+                                  color: Color.fromARGB(255, 8, 125, 159),
+                                  fontWeight: FontWeight.w700),
                             ),
-                          ),
-                          Expanded(flex: 1, child: Container()),
-                        ],
-                      ),
+                            height: 180,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.zero,
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(23000),
+                                  bottomRight: Radius.circular(10)),
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          )),
+                      Expanded(
+                          child: Container(
+                              height: double.infinity,
+                              alignment: Alignment.topCenter,
+                              child: Image.asset(
+                                "images/Logo.png",
+                                fit: BoxFit.fill,
+                              )))
                     ],
-                  ),
+                  )),
+                ],
+              ),
+            )),
+        Expanded(
+            flex: 5,
+            child: Container(
+              alignment: Alignment.center,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 30, right: 60, top: 80, bottom: 0),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                          label: Text(
+                            "Full Name",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                          icon: Icon(Icons.person_sharp),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 192, 192, 192)),
+                              borderRadius: BorderRadius.circular(30)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15))),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 30)),
+                    TextField(
+                      obscureText: obscureText,
+                      decoration: InputDecoration(
+                          suffix: InkWell(
+                            onTap: () {
+                              setState(() {
+                                obscureText = !obscureText;
+                              });
+                            },
+                            child: Icon(Icons.remove_red_eye_outlined),
+                          ),
+                          label: Text(
+                            "Password",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                          icon: Icon(Icons.password),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 192, 192, 192)),
+                              borderRadius: BorderRadius.circular(30)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15))),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 30)),
+                  ],
                 ),
               ),
+            )),
+        Expanded(
+          flex: 5,
+          child: Column(
+            children: [
+              Padding(padding: EdgeInsets.only(top: 40)),
+              InkWell(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Log in",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w700),
+                    ),
+                    height: 50,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 74, 193, 241),
+                        borderRadius: BorderRadius.circular(30)),
+                  ),
+                  onTap: () {
+                    Navigator.pushReplacementNamed(context, "StudentMainPage");
+                  }),
+              Padding(padding: EdgeInsets.only(top: 40)),
+              Row(
+                children: [
+                  Expanded(
+                      child: Container(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "New User ? ",
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 206, 206, 206),
+                          fontWeight: FontWeight.w500),
+                    ),
+                  )),
+                  Expanded(
+                      child: Container(
+                    margin: EdgeInsets.only(left: 20),
+                    alignment: Alignment.centerLeft,
+                    child: TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, "WhatAreYouPage");
+                        },
+                        child: Text(
+                          "Sign up",
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Color.fromARGB(255, 74, 193, 241),
+                              fontWeight: FontWeight.w500),
+                        )),
+                  )),
+                ],
+              )
             ],
           ),
-        ),
-      ),
+        )
+      ]),
     );
   }
 }

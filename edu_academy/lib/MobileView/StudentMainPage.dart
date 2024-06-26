@@ -20,7 +20,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
           children: [
             Container(
               height: 50,
-              decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   Expanded(
@@ -35,7 +35,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                                 PageIndex = 0;
                                 });
                               },
-                              child: Image.asset("images/Logo.png")))),
+                              child: Image.asset("images/Book.png")))),
                   Expanded(
                       flex: 2,
                       child: Container(
@@ -61,7 +61,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                       child: InkWell(
                         onTap: () {},
                         child: Container(
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
                           height: 50,
                           child: Icon(Icons.notifications),
                         ),
@@ -79,7 +79,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
           children: [
             Container(
               height: 50,
-              decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   Expanded(
@@ -94,7 +94,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                                 PageIndex = 0;
                                 });
                               },
-                              child: Image.asset("images/Logo.png")))),
+                              child: Image.asset("images/Book.png")))),
                   Expanded(
                       flex: 2,
                       child: Container(
@@ -120,7 +120,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                       child: InkWell(
                         onTap: () {},
                         child: Container(
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
                           height: 50,
                           child: Icon(Icons.notifications),
                         ),
@@ -138,7 +138,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
           children: [
             Container(
               height: 50,
-              decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   Expanded(
@@ -153,7 +153,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                                 PageIndex = 0;
                                 });
                               },
-                              child: Image.asset("images/Logo.png")))),
+                              child: Image.asset("images/Book.png")))),
                   Expanded(
                       flex: 2,
                       child: Container(
@@ -179,7 +179,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                       child: InkWell(
                         onTap: () {},
                         child: Container(
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
                           height: 50,
                           child: Icon(Icons.notifications),
                         ),
@@ -197,7 +197,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
           children: [
             Container(
               height: 50,
-              decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   Expanded(
@@ -212,7 +212,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                                 PageIndex = 0;
                                 });
                               },
-                              child: Image.asset("images/Logo.png")))),
+                              child: Image.asset("images/Book.png")))),
                   Expanded(
                       flex: 2,
                       child: Container(
@@ -238,7 +238,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
                       child: InkWell(
                         onTap: () {},
                         child: Container(
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 243, 186),borderRadius: BorderRadius.circular(10)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 74, 193, 241),borderRadius: BorderRadius.circular(10)),
                           height: 50,
                           child: Icon(Icons.notifications),
                         ),
@@ -254,7 +254,7 @@ class _StudentMainPageState extends State<StudentMainPage> {
     ];
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        color: Color.fromARGB(255, 255, 243, 186),
+        color: Color.fromARGB(255, 74, 193, 241),
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           index: PageIndex,
           height: 60,
