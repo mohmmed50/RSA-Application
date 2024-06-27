@@ -73,7 +73,7 @@ class _LoginPageState extends State<LogInPage> {
               alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.only(
-                    left: 30, right: 60, top: 80, bottom: 0),
+                    left: 30, right: 60, top: 60, bottom: 0),
                 child: Column(
                   children: [
                     TextField(
@@ -91,7 +91,7 @@ class _LoginPageState extends State<LogInPage> {
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15))),
                     ),
-                    Padding(padding: EdgeInsets.only(top: 30)),
+                    Expanded(child:Container()),
                     TextField(
                       obscureText: obscureText,
                       decoration: InputDecoration(
@@ -116,16 +116,16 @@ class _LoginPageState extends State<LogInPage> {
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15))),
                     ),
-                    Padding(padding: EdgeInsets.only(top: 30)),
+                    Expanded(child:Container()),
                   ],
                 ),
               ),
             )),
         Expanded(
-          flex: 5,
+          flex: 3,
           child: Column(
             children: [
-              Padding(padding: EdgeInsets.only(top: 40)),
+              Expanded(child:Container()),
               InkWell(
                   child: Container(
                     alignment: Alignment.center,
@@ -145,7 +145,7 @@ class _LoginPageState extends State<LogInPage> {
                   onTap: () {
                     Navigator.pushReplacementNamed(context, "StudentMainPage");
                   }),
-              Padding(padding: EdgeInsets.only(top: 40)),
+              Expanded(child:Container()),
               Row(
                 children: [
                   Expanded(
@@ -176,7 +176,8 @@ class _LoginPageState extends State<LogInPage> {
                         )),
                   )),
                 ],
-              )
+              ),
+              Padding(padding:EdgeInsets.only(top: 20)),
             ],
           ),
         )

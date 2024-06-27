@@ -31,85 +31,88 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: ListView(
           children: [
-            Container(
-              height: 250,
+            Expanded(
               child: Container(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.bottomLeft,
-                        end: Alignment.topRight,
-                        colors: [
-                      Color.fromARGB(255, 8, 125, 159),
-                      Color.fromARGB(255, 74, 193, 241)
-                    ])),
-                child: Column(
-                  children: [
-                    Expanded(
-                        child: Row(
-                      children: [
-                        Expanded(
-                          flex: 10,
-                          child: Column(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  width: double.infinity,
-                                  alignment: Alignment.centerLeft,
-                                  padding: EdgeInsets.only(left: 20),
-                                  child: IconButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      icon: Icon(Icons.arrow_back)),
-                                ),
-                              ),
-                              Container(
-                                  alignment: Alignment.bottomLeft,
+                height: 250,
+                child: Container(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          begin: Alignment.bottomLeft,
+                          end: Alignment.topRight,
+                          colors: [
+                        Color.fromARGB(255, 8, 125, 159),
+                        Color.fromARGB(255, 74, 193, 241)
+                      ])),
+                  child: Column(
+                    children: [
+                      Expanded(
+                          child: Row(
+                        children: [
+                          Expanded(
+                            flex: 10,
+                            child: Column(
+                              children: [
+                                Expanded(
                                   child: Container(
-                                    padding: EdgeInsets.fromLTRB(0, 40, 20, 0),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "Sign up",
-                                      style: TextStyle(
-                                          fontSize: 40,
-                                          color:
-                                              Color.fromARGB(255, 8, 125, 159),
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                    height: 180,
-                                    width: 180,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.zero,
-                                          topLeft: Radius.circular(10),
-                                          topRight: Radius.circular(23000),
-                                          bottomRight: Radius.circular(10)),
-                                      color: const Color.fromARGB(
-                                          255, 255, 255, 255),
-                                    ),
-                                  )),
-                            ],
+                                    width: double.infinity,
+                                    alignment: Alignment.centerLeft,
+                                    padding: EdgeInsets.only(left: 20),
+                                    child: IconButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        icon: Icon(Icons.arrow_back)),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Container(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Container(
+                                        padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "Sign up",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color:
+                                                  Color.fromARGB(255, 8, 125, 159),
+                                              fontWeight: FontWeight.w700),
+                                        ),
+                                        width: 120,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.zero,
+                                              topLeft: Radius.circular(10),
+                                              topRight: Radius.circular(23000),
+                                              bottomRight: Radius.circular(10)),
+                                          color: const Color.fromARGB(
+                                              255, 255, 255, 255),
+                                        ),
+                                      )),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Expanded(
-                            flex: 12,
-                            child: Container(
-                                height: double.infinity,
-                                alignment: Alignment.topCenter,
-                                child: Image.asset(
-                                  "images/Logo.png",
-                                  fit: BoxFit.fill,
-                                )))
-                      ],
-                    )),
-                  ],
+                          Expanded(
+                              flex: 12,
+                              child: Container(
+                                  height: double.infinity,
+                                  alignment: Alignment.topCenter,
+                                  child: Image.asset(
+                                    "images/Logo.png",
+                                    fit: BoxFit.fill,
+                                  )))
+                        ],
+                      )),
+                    ],
+                  ),
                 ),
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 40)),
             Container(
               color: const Color.fromARGB(255, 255, 255, 255),
-              height: 900,
+              height: 1050,
               width: 300,
               child: Padding(
                 padding: const EdgeInsets.only(left: 30, right: 30),
@@ -117,20 +120,21 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   Container(
                     child: Row(
                       children: [
-                        Container(width: 130,alignment: Alignment.centerLeft,child: Text("Student  ",style: TextStyle(fontSize: 35,fontWeight: FontWeight.w600,color:Color.fromARGB(255, 8, 125, 159) ))),
-                        Container(height: 35,alignment: Alignment.bottomLeft,child: Icon(Icons.arrow_forward,color: Color.fromARGB(255, 8, 125, 159),)),
+                        Container(alignment: Alignment.centerLeft,child: Text("Student  ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600,color:Color.fromARGB(255, 8, 125, 159) ))),
+                        Expanded(child: Container(height: 35,alignment: Alignment.bottomLeft,child: Icon(Icons.arrow_forward,color: Color.fromARGB(255, 8, 125, 159),))),
                       ],
                     ),
                   ),
                   Padding(padding: EdgeInsets.only(top: 40)),
                   Container(
+                    width: 300,
                     height: 40,
                     child: TextField(
                       decoration: InputDecoration(
                           label: Text(
                             "Full Name",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w600),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -142,13 +146,14 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
                   Container(
+                    width: 300,
                     height: 40,
                     child: TextField(
                       decoration: InputDecoration(
                           label: Text(
-                            "Student's Gardian Phone Number",
+                            "Gardian Phone Number",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w600),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -160,6 +165,7 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
                   Container(
+                    width: 300,
                     height: 40,
                     child: TextField(
                       decoration: InputDecoration(
@@ -167,9 +173,9 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
-                                "Student's Phone Number",
+                                "Phone Number",
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w600),
+                                    fontSize: 15, fontWeight: FontWeight.w600),
                               ),
                               Text(
                                 "  ( If Avialabe )",
@@ -191,13 +197,14 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
                   Container(
+                    width: 300,
                     height: 40,
                     child: TextField(
                       decoration: InputDecoration(
                           label: Text(
                             "Email",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w600),
                           ),
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -209,6 +216,7 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
                   Container(
+                    width: 300,
                     height: 40,
                     child: TextField(
                       obscureText: obscureText,
@@ -224,7 +232,7 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                           label: Text(
                             "Password",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w600),
                           ),
                           icon: Icon(Icons.password),
                           enabledBorder: OutlineInputBorder(
@@ -237,92 +245,100 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
                   Padding(padding: EdgeInsets.only(top: 10)),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Date of birth",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Date of birth",
+                        style:
+                            TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ),
                   Padding(padding: EdgeInsets.only(top: 20)),
                   Row(
                     children: [
-                      Padding(padding: EdgeInsets.only(left: 100)),
-                      Container(
-                        width: 40,
+                      Expanded(child: Container()),
+                      Expanded(child:Container(
+                        
                         child: TextField(
                           onChanged: (value) {
                             StudentDayOfBirth = value;
                             StudentDateOfBirth =
                                 "$StudentDayOfBirth/$StudentMonthOfBirth/$StudentYearOfBirth";
                           },
-                          decoration: InputDecoration(label: Text("Day")),
+                          decoration: InputDecoration(label: Text("Day")),style: TextStyle(fontSize: 10),
                         ),
-                      ),
+                      )),
                       Text(
                         "  /  ",
                         style: TextStyle(fontSize: 30),
                       ),
-                      Container(
-                        width: 50,
+                      Expanded(child:Container(
                         child: TextField(
                           onChanged: (value) {
                             StudentMonthOfBirth = value;
                             StudentDateOfBirth =
                                 "$StudentDayOfBirth/$StudentMonthOfBirth/$StudentYearOfBirth";
                           },
-                          decoration: InputDecoration(label: Text("Month")),
+                          decoration: InputDecoration(label: Text("Month",style: TextStyle(fontSize: 10))),
                         ),
-                      ),
+                      )),
                       Text(
                         "  /  ",
                         style: TextStyle(fontSize: 30),
                       ),
-                      Container(
-                        width: 50,
-                        child: TextField(
-                          onChanged: (value) {
-                            StudentYearOfBirth = value;
-                            StudentDateOfBirth =
-                                "$StudentDayOfBirth/$StudentMonthOfBirth/$StudentYearOfBirth";
-                          },
-                          decoration: InputDecoration(label: Text("Year")),
+                      Expanded(
+                        child: Container(
+                          child: TextField(
+                            onChanged: (value) {
+                              StudentYearOfBirth = value;
+                              StudentDateOfBirth =
+                                  "$StudentDayOfBirth/$StudentMonthOfBirth/$StudentYearOfBirth";
+                            },
+                            decoration: InputDecoration(label: Text("Year",style: TextStyle(fontSize: 10))),
+                          ),
                         ),
                       ),
-                    ],
+                      Expanded(child: Container()),
+                  ],
                   ),
+                  Padding(padding: EdgeInsets.only(top: 40)),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Geneder",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.w600),
+                        ),
+                      ),
                   Padding(padding: EdgeInsets.only(top: 40)),
                   Row(
                     children: [
-                      Text(
-                        "Geneder",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w600),
-                      ),
-                      Padding(padding: EdgeInsets.only(right: 30)),
+                  Padding(padding: EdgeInsets.only(top: 40)),
                       Expanded(
-                          child: RadioListTile(
+                          child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: const Color.fromARGB(96, 216, 216, 216),),child:RadioListTile(
                               activeColor: Color.fromARGB(255, 74, 193, 241),
-                              title: Text("Male"),
+                              title: Text("Male",style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500),),
                               value: "Male",
                               groupValue: StudentGender,
                               onChanged: (val) {
                                 setState(() {
                                   StudentGender = val.toString();
                                 });
-                              })),
+                              }))),
+                              Padding(padding: EdgeInsets.only(left: 20)),
                       Expanded(
-                          child: RadioListTile(
+                          child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: const Color.fromARGB(96, 216, 216, 216),),child:RadioListTile(
                               activeColor: Color.fromARGB(255, 74, 193, 241),
-                              title: Text("Female"),
+                              title: Text("Female",style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500)),
                               value: "Female",
                               groupValue: StudentGender,
                               onChanged: (val) {
                                 setState(() {
                                   StudentGender = val.toString();
                                 });
-                              }))
+                              })))
                     ],
                   ),
                   Padding(padding: EdgeInsets.only(top: 30)),
@@ -333,7 +349,6 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.w600),
                       ),
-                      Padding(padding: EdgeInsets.only(right: 30)),
                       Expanded(
                         child: Container(
                           alignment: Alignment.center,
@@ -459,7 +474,8 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  Expanded(child: Container())
                 ]),
               ),
             )
