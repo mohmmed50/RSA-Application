@@ -31,10 +31,9 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: ListView(
           children: [
-            Expanded(
+            Container(
+              height: 250,
               child: Container(
-                height: 250,
-                child: Container(
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.bottomLeft,
@@ -108,7 +107,6 @@ class _StudentMobileSignUpPageState extends State<StudentMobileSignUpPage> {
                   ),
                 ),
               ),
-            ),
             Padding(padding: EdgeInsets.only(top: 40)),
             Container(
               color: const Color.fromARGB(255, 255, 255, 255),

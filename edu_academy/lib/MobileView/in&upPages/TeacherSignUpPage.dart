@@ -21,10 +21,9 @@ class _TeacherSignUpPageState extends State<TeacherSignUpPage> {
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: ListView(
           children: [
-            Expanded(
+            Container(
+              height: 250,
               child: Container(
-                height: 250,
-                child: Container(
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           begin: Alignment.bottomLeft,
@@ -98,7 +97,6 @@ class _TeacherSignUpPageState extends State<TeacherSignUpPage> {
                   ),
                 ),
               ),
-            ),
             Expanded(child:Container()),
             Expanded(
               child: Container(
